@@ -4,13 +4,10 @@ from .screenshot import new_capture_window_thread
 from .table import build_table
 from .screenshot import get_active_window
 from .app import get_parser
-from multiprocessing import Process, Queue, freeze_support
+from multiprocessing import Queue, freeze_support
 import time
 from rich.live import Live
 from rich.status import Status
-
-
-
 
 
 def record_current_terminal(output_file:str, fps:int=12, reduce_percent:int=20, countdown:int=5):
