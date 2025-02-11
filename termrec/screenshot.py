@@ -4,7 +4,6 @@ import time
 import mss
 
 
-
 def get_active_window() -> gw.Window:
     """
     Returns the currently active window, or None if no window is active.
@@ -31,7 +30,6 @@ def get_active_window() -> gw.Window:
 
 def new_capture_window_thread(frameq: mp.Queue, fps:int=12) -> mp.Process:
     return mp.Process(target=capture_window_at_interval, args=(frameq, fps,))
-
 
 def capture_window_at_interval(frameq: mp.Queue, fps:int=12):
     window = get_active_window()
